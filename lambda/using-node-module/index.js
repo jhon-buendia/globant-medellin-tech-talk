@@ -28,7 +28,7 @@ exports.handler = (event, context, callback) => {
         var category = dataModel.getCategoryByName(category_required);
 
         if(!category) {
-            response['data'] = false;
+             response['status'] = 404;
         } else {
              response['data'] = JSON.stringify( category,null,2);
         }

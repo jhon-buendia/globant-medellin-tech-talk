@@ -57,7 +57,7 @@ exports.handler = (event, context, callback) => {
         console.log("category[category_required].length");
         console.log(categories[category_required]);
         if(! categories[category_required]) {
-            response['data'] = false;
+            response['status'] = 404;
         } else {
              response['data'] = JSON.stringify( categories[category_required],null,2);
         }
